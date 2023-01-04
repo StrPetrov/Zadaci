@@ -1,0 +1,161 @@
+@mixin myFontStyle {
+    font: {
+        size: 1.25em;
+        weight: bold;
+    }
+}
+* {
+    box-sizing: border-box;
+    font-size: 18px;
+}
+.header {
+    text-align: center;
+    width: 35%;
+    margin: auto;
+    
+    h1 {
+        font-size: 3.3em;
+    }
+
+    p {
+        color: rgb(176, 163, 163);
+    }
+}
+.container {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+
+    img {
+        width: 400px;
+        height: 350px;
+    }
+    .card {
+        float: left;
+        margin: 20px;
+        width: 30%;
+
+        p {
+            color: rgb(176, 163, 163);
+        }
+        button {
+            padding: 15px 25px;
+            border: 1px solid black;
+            margin-top: 50px;
+        }
+    }
+    .desc {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        h1 {
+            @include myFontStyle;
+        }
+        span {
+            @extend h1;
+            color: red;
+        }
+    }
+}
+
+@media only screen and (max-width: 1800px) {
+    .container {
+        width: 100%;
+
+        img {
+            width: 70%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .card {
+            float: none;
+            width: 70%;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+
+            button {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            p {
+                width: 70%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        .desc {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+            
+            h1 {
+                @include myFontStyle;
+            }
+            span {
+                @include myFontStyle;
+                color: red;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .card {
+            float: none;
+            width: 100%;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+
+            button {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            p {
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        .desc {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            
+            h1 {
+                @include myFontStyle;
+            }
+            span {
+                @include myFontStyle;
+                color: red;
+            }
+        }
+    }
+}

@@ -1,0 +1,500 @@
+@mixin description {
+    position: absolute;
+    left: 20px;
+    color: rgb(175, 170, 170);
+    line-height: 1.6;
+}
+
+@mixin working_days {
+    position: absolute;
+    left: 20px;
+    color: rgb(175, 170, 170);
+}
+
+@mixin working_hours {
+    position: absolute;
+    right: 10px;
+    color: rgb(175, 170, 170);
+}
+
+@mixin term {
+    position: absolute;
+    left: 20px;
+    color: rgb(175, 170, 170);
+    width: 100%;
+}
+
+@mixin hr {
+    background-color: rgba(175, 170, 170, 0.1);
+    height: 1px;
+    border: none;
+    width: 100%;
+}
+
+@mixin table_cell_centered {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+$myOrange: rgba(249, 154, 30);
+
+* {
+    font-family: Raleway, sans-serif;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    box-sizing: border-box;
+}
+.header {
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3%;
+    text-align: center;
+
+    h3 {
+        color: grey;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        margin-top: 0;
+        font-size: 2.3em;
+    }
+}
+
+.menu {
+    display: flex;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    border-bottom: 4px solid $myOrange;
+
+    .button {
+        padding: 15px 20px;
+        font-size: 15px;
+        color: rgb(70, 68, 68);
+        font-weight: bold;
+        &:hover {
+            background-color: $myOrange;
+        }
+    }
+
+    .active {
+        background-color: $myOrange;
+    }
+}
+
+.gallery {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    .row {
+        flex: 100%;
+        display: flex;
+        flex-direction: row;
+
+        .img_container {
+            flex: 33.333%;
+            height: 17vw;
+            position: relative;
+            &:hover .overlay {
+                opacity: 1;
+            }
+
+            .overlay {
+                position: absolute;
+                background-color: rgba(5, 5, 5, 0.7);
+                width: 100%;
+                height: 100%;
+                top: 0;
+                opacity: 0;
+
+                h3 {
+                    position: absolute;
+                    top: 35%;
+                    left: 10%;
+                    color: white;
+                    font-size: bold;
+                }
+
+                .btn {
+                    position: absolute;
+                    top: 65%;
+                    left: 10%;
+                    width: 60%;
+                    height: 5%;
+                    background-color: $myOrange;
+                    color: black;
+                    padding: 10px;
+                    display: table;
+                }
+
+                .btn span {
+                    @include table_cell_centered;
+                    font-size: 15px;
+                }
+
+                .corner {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    font-weight: bold;
+                    font-size: 18px;
+                    color: white;
+                    width: 50px;
+                    height: 50px;
+                    background-color: $myOrange;
+                    display: table;
+                }
+
+                .corner i {
+                    @include table_cell_centered;
+                }
+            }
+        }
+    }
+        
+    img {
+        width: 100%;
+        height: 17vw;
+    }
+}
+
+.footer_container {
+    width: 100%;
+    height: 800px;
+    margin-top: 10%;
+    background-color: black;
+    position: relative;
+
+    .section {
+        width: 60%;
+        height: 400px;
+        display: flex;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .col {
+            flex: 33.333%;
+            height: 100%;
+            position: relative;
+        }
+
+        .col .vertical_line {
+            width: 5px;
+            height: 30px;
+            background-color: $myOrange;
+            position: absolute;
+            top: 30px;
+            left: 20px;
+        }
+
+        .col .head {
+            position: absolute;
+            top: 37px;
+            left: 50px;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .col .icon_machine {
+            position: absolute;
+            top: 90px;
+            left: 20px;
+            color: $myOrange;
+            font-size: 30px;
+
+            .constra {
+                color: white;
+                font-size: 30px;
+                font-weight: bold;
+                font-family: Pacifico;
+            }
+        }
+
+        .col .description {
+            @include description;
+            top: 180px;
+        }
+
+        .col .icons {
+            @include working_days;
+            top: 280px;
+
+            i {
+                padding-right: 9px;
+            }
+        }
+
+        .col .second_description {
+            @include description;
+            top: 90px;
+        }
+
+        .col .working_hours .days {
+            @include working_days;
+            top: 230px;
+        }
+
+        .col .working_hours .hours {
+            @include working_hours;
+            top: 230px;
+        }
+
+        .col .working_hours .days2 {
+            @include working_days;
+            top: 255px;
+        }
+
+        .col .working_hours .hours2 {
+            @include working_hours;
+            top: 255px;
+        }
+
+        .col .working_hours .days3 {
+            @include working_days;
+            top: 280px;
+        }
+
+        .col .working_hours .hours3 {
+            @include working_hours;
+            top: 280px;
+        }
+
+        .col .term {
+            @include term;
+            top: 100px;
+
+            i {
+                padding-right: 10px;
+            }
+
+            hr {
+                @include hr;
+            }
+        }
+        .col .term2 {
+            @include term;
+            top: 150px;
+
+            i {
+                padding-right: 10px;
+            }
+
+            hr {
+                @include hr;
+            }
+        }
+        .col .term3 {
+            @include term;
+            top: 200px;
+
+            i {
+                padding-right: 10px;
+            }
+
+            hr {
+                @include hr;
+            }
+        }
+        .col .term4 {
+            @include term;
+            top: 250px;
+
+            i {
+                padding-right: 10px;
+            }
+
+            hr {
+                @include hr;
+            }
+        }
+
+        .col .term5 {
+            @include term;
+            top: 300px;
+
+            i {
+                padding-right: 10px;
+            }
+
+            hr {
+                @include hr;
+            }
+        }
+    }
+
+    .footer {
+        width: 100%;
+        height: 100px;
+        background-color: $myOrange;
+        position: absolute;
+        top: 75%;
+
+        .copyright {
+            position: absolute;
+            top: 37%;
+            left: 20%;
+            padding-left: 15px;
+            font-size: 13px;
+        }
+
+        .footer_menu {
+            position: absolute;
+            top: 37%;
+            left: 65%;
+
+            .footer_button {
+                padding: 0 10px;
+                font-size: 13px;
+            }
+        }
+
+        .arrow_up {
+            position: absolute;
+            top: 25%;
+            right: 60px;
+            width: 50px;
+            height: 50%;
+            background-color: black;
+            display: table;
+            border-radius: 10px;
+
+            i {
+                color: $myOrange;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 150px) and (max-width: 800px) {
+    .header {
+        width: 100%;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .gallery {
+        display: block;
+
+        .row {
+            display: block;
+
+            .img_container {
+                height: 300px;
+            }
+        }
+
+        img {
+            height: 300px;
+        }
+    }
+
+    .footer_container {
+        height: 1300px;
+
+        .section {
+            display: block;
+            top: 20%;
+            width: 100%;
+
+            .col {
+                display: block;
+            }
+        }
+
+        .footer {
+            top: 100%;
+            
+            .copyright {
+                top: 20%;
+                left: 5%;
+            }
+
+            .footer_menu {
+                top: 60%;
+                left: 5%;
+            }
+
+            .arrow_up {
+                right: 30px;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 801px) and (max-width: 1470px) {
+    .header {
+        width: 100%;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .gallery {
+        display: block;
+
+        .row {
+            display: block;
+
+            .img_container {
+                height: 500px;
+            }
+        }
+
+        img {
+            height: 500px;
+        }
+    }
+
+    .footer_container {
+        height: 1300px;
+
+        .section {
+            display: block;
+            top: 20%;
+            width: 100%;
+
+            .col {
+                display: block;
+            }
+        }
+
+        .footer {
+            top: 100%;
+            
+            .copyright {
+                top: 40%;
+                left: 5%;
+            }
+
+            .footer_menu {
+                top: 40%;
+                left: 45%;
+            }
+
+            .arrow_up {
+                right: 30px;
+            }
+        }
+    }
+}
+
+
+
