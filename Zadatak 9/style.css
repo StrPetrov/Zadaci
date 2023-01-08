@@ -1,0 +1,180 @@
+* {
+  font-family: Raleway, sans-serif;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(189, 187, 187);
+  display: flex;
+}
+.header .header__icon {
+  font-size: 40px;
+  margin-top: 20px;
+}
+.header .header__vertical_line {
+  height: 45px;
+  width: 1px;
+  background-color: rgb(189, 187, 187);
+  margin-top: 20px;
+  margin-left: 15px;
+}
+.header .header__title {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+.header .header__title .header__subtitle {
+  margin-top: 0;
+}
+.header .header__title .header__h {
+  margin-bottom: 0;
+  margin-top: 0;
+  color: black;
+}
+
+.container {
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 75px;
+  height: auto;
+  display: flex;
+}
+.container .container__box {
+  flex: 25%;
+  border: 1px solid rgb(200, 196, 196);
+  padding: 5px 0;
+  margin-right: 30px;
+  position: relative;
+}
+.container .container__box .container__box-title {
+  text-align: center;
+  color: grey;
+}
+.container .container__box .container__box-title .container__box-title__h {
+  margin-bottom: 0;
+}
+.container .container__box .container__box-title .container__box-title__subtitle {
+  margin-top: 0;
+  font-size: 13px;
+}
+.container .container__box .container__box-title__h--active, .container .container__box .container__box-title__subtitle--active {
+  color: black;
+}
+.container .container__box .container__bubble {
+  margin-top: 20px;
+  position: relative;
+  background: rgb(240, 236, 236);
+  color: #5f5d5d;
+  font-family: Arial;
+  font-size: 40px;
+  width: 100%;
+  height: 140px;
+  padding: 0px;
+}
+.container .container__box #active {
+  background-color: rgb(247, 49, 49);
+}
+.container .container__box .container__bubble::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  z-index: 1;
+  border-style: solid;
+  border-color: rgb(240, 236, 236) transparent;
+  border-width: 20px 20px 0;
+  bottom: -20px;
+  left: 50%;
+  margin-left: -20px;
+}
+.container .container__box #active::after {
+  border-color: rgb(247, 49, 49) transparent;
+}
+.container .container__box .container__bubble__price {
+  width: 130px;
+  height: 80px;
+  font-family: Arial;
+  color: rgb(86, 85, 85);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: table;
+}
+.container .container__box .container__bubble__price .container__bubble__price--up, .container .container__box .container__bubble__price .container__bubble__price--down {
+  font-size: 20px;
+}
+.container .container__box .container__bubble__price .container__bubble__price__num {
+  font-size: 40px;
+  font-weight: bold;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.container .container__box #active .container__bubble__price {
+  color: white;
+}
+.container .container__box .container__box__offer {
+  margin-top: 25px;
+  margin-bottom: 35px;
+}
+.container .container__box .container__box__offer .container__box__table {
+  width: 100%;
+}
+.container .container__box .container__box__offer .container__box__table__row {
+  width: 100%;
+}
+.container .container__box .container__box__offer .container__box__table__data {
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid rgb(200, 196, 196);
+  color: grey;
+}
+.container .container__box .container__box__offer .container__box__table__data--last {
+  border: none;
+}
+.container .container__box .container__box__signup-btn {
+  width: 50%;
+  height: 40px;
+  border-radius: 999px;
+  border: 2px solid rgb(247, 49, 49);
+  background-color: white;
+  display: table;
+  position: absolute;
+  bottom: -20px;
+  left: 25%;
+  z-index: 1;
+}
+.container .container__box .container__box__signup-btn .container__box__signup {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+@media only screen and (min-width: 150px) and (max-width: 649px) {
+  .container {
+    display: block;
+    width: 100%;
+  }
+  .container .container__box {
+    margin: 80px 0;
+  }
+  .header {
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 650px) and (max-width: 1200px) {
+  .container {
+    display: block;
+  }
+  .container .container__box {
+    margin: 80px 0;
+  }
+  .header {
+    justify-content: center;
+  }
+}/*# sourceMappingURL=style.css.map */

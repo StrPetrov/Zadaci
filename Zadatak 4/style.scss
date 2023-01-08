@@ -5,15 +5,15 @@
 .header {
     text-align: center;
 
-    h1 {
+    .header__title {
         color: rgb(14, 14, 124);
     }
 
-    h3 {
+    .header__subtitle {
         color: rgb(150, 140, 140);
     }
 
-    .line {
+    .header__line {
         padding: 3px;
         width: 70px;
         background-color: rgb(252, 23, 62);
@@ -30,7 +30,7 @@
     text-align: center;
     display: flex;
 
-    .button {
+    .menu__button {
         flex: 33.333%;
         padding: 20px;
         margin: 5px;
@@ -44,7 +44,7 @@
         }
     }
 
-    .active {
+    .menu__button--active {
         background-color: rgb(252, 23, 62);
     }
 }
@@ -67,11 +67,11 @@
     margin-right: auto;
     width: 54%;
 
-    .row {
+    .content__row {
         position: relative;
     }
 
-    .time {
+    .content__time {
         position: absolute;
         top: 0;
         left: 0;
@@ -79,7 +79,7 @@
         font-size: 18px;
     }
 
-    .timeOther {
+    .content__timeOther {
         position: absolute;
         top: 10px;
         left: 0;
@@ -87,28 +87,28 @@
         font-size: 18px;
     }
 
-    .bold {
+    .content__bold {
         margin-left: 16.5%;
         font-size: 18px;
         font-weight: bold;
         color: rgb(36, 35, 35);
     }
 
-    .desc {
+    .content__desc {
         margin-left: 16.5%;
         font-size: 18px;
         font-style: italic;
         color: rgb(90, 86, 86)
     }
 
-    img {
+    .content__img {
         width: 80px;
         height: 80px;
         border-radius: 50%;
         margin-left: 16.5%;
     }
 
-    .name {
+    .content__name {
         position: absolute;
         top: 10px;
         margin-left: 10px;
@@ -116,13 +116,13 @@
         font-size: 18px;
     }
 
-    .boldname {
+    .content__name--boldname{
         font-weight: bold;
         font-size: 18px;
         color: rgb(36, 35, 35);
     }
 
-    .descOther {
+    .content__descOther {
         position: absolute;
         top: 40px;
         margin-left: 10px;
@@ -131,7 +131,7 @@
         font-style: italic;
     }
 
-    .last {
+    .content__row--last{
         margin-bottom: 100px;
     }
 }
@@ -145,7 +145,7 @@
     right: 30px;
     display: table;
 
-    i {
+    .up__icon {
         display: table-cell;
         vertical-align: middle;
         text-align: center;
@@ -166,23 +166,23 @@
     .content {
         width: 100%;
 
-        .bold {
+        .content__bold {
             margin-left: 40%;
         }
 
-        .desc {
+        .content__desc {
             margin-left: 40%;
         }
 
-        img {
+        .content__img {
             margin-left: 40%;
         }
 
-        hr {
+        .content__hr {
             margin-top: 30%;
         }
 
-        .descOther {
+        .content__descOther {
             margin-top: 60px;
             top: 40px;
             left: 20px;
@@ -202,23 +202,23 @@
     .content {
         width: 100%;
 
-        .bold {
+        .content__bold {
             margin-left: 40%;
         }
 
-        .desc {
+        .content__desc {
             margin-left: 40%;
         }
 
-        img {
+        .content__img {
             margin-left: 40%;
         }
 
-        hr {
+        .content__hr {
             margin-top: 11%;
         }
 
-        .descOther {
+        .content__descOther {
             margin-top: 40px;
         }
     }

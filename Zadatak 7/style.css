@@ -10,12 +10,12 @@
   margin-bottom: 5%;
   text-align: center;
 }
-.header p {
+.header .header__subtitle {
   font-size: 18px;
   margin-bottom: 10px;
   color: grey;
 }
-.header h1 {
+.header .header__title {
   margin-top: 0;
   font-size: 45px;
 }
@@ -26,38 +26,38 @@
   margin-left: auto;
   margin-right: auto;
 }
-.container .col {
+.container .container__col {
   flex: 33.333%;
   height: 50vh;
 }
-.container .image {
+.container .container__image {
   height: 60vh;
   background-image: url("img1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.container .content {
+.container .container__content {
   display: flex;
   flex-direction: column;
 }
-.container .content .cnt {
+.container .container__content .container__cnt {
   flex: 33.333%;
   position: relative;
 }
-.container .content .cnt i {
+.container .container__content .container__cnt .container__cnt__icon {
   position: absolute;
   top: 13%;
   left: 0;
   font-size: 50px;
   color: rgb(245, 190, 9);
 }
-.container .content .cnt h4 {
+.container .container__content .container__cnt .container__cnt__title {
   position: absolute;
   top: 0;
   left: 25%;
   color: rgb(48, 47, 47);
 }
-.container .content .cnt p {
+.container .container__content .container__cnt .container__cnt__text {
   position: absolute;
   top: 25%;
   left: 25%;
@@ -70,7 +70,7 @@
     width: 100%;
     display: block;
   }
-  .container .image {
+  .container .container__image {
     display: none;
   }
 }
@@ -78,10 +78,10 @@
   .container {
     width: 100%;
   }
-  .container .image {
+  .container .container__image {
     display: none;
   }
-  .container .content {
+  .container .container__content {
     padding: 0 10px;
   }
 }/*# sourceMappingURL=style.css.map */

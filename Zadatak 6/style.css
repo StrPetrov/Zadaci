@@ -32,21 +32,21 @@ body::before {
   width: 25%;
   height: 400px;
 }
-.box .top {
+.box .box__top {
   position: absolute;
   top: 10%;
   left: 50px;
   color: rgb(252, 40, 40);
   font-weight: bold;
 }
-.box h1 {
+.box .box__title {
   position: absolute;
   top: 20%;
   left: 50px;
   right: 100px;
   line-height: 1.4;
 }
-.box .bot {
+.box .box__bot {
   position: absolute;
   top: 65%;
   left: 50px;
@@ -54,18 +54,18 @@ body::before {
   color: grey;
   line-height: 1.4;
 }
-.box .number {
+.box .box__number {
   position: absolute;
   top: 83%;
   left: 50px;
   right: 100px;
 }
-.box .number i {
+.box .box__number .box__icon {
   font-size: 25px;
   color: rgb(252, 40, 40);
   padding-right: 20px;
 }
-.box .number span {
+.box .box__number .box__num {
   font-size: 25px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
@@ -77,16 +77,16 @@ body::before {
     height: 50vh;
     left: 0;
   }
-  .box .top {
+  .box .box__top {
     top: 5%;
   }
-  .box h1 {
+  .box .box__title {
     top: 15%;
   }
-  .box .bot {
+  .box .box__bot {
     top: 55%;
   }
-  .box .number {
+  .box .box__number {
     top: 75%;
   }
 }
@@ -96,10 +96,10 @@ body::before {
     left: 15%;
     right: 15%;
   }
-  .box .bot {
+  .box .box__bot {
     top: 55%;
   }
-  .box .number {
+  .box .box__number {
     top: 70%;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -8,10 +8,10 @@
   width: 35%;
   margin: auto;
 }
-.header h1, .header .container .desc span, .container .desc .header span {
+.header .header__title {
   font-size: 3.3em;
 }
-.header p {
+.header .header__subtitle {
   color: rgb(176, 163, 163);
 }
 
@@ -21,65 +21,68 @@
   margin-right: auto;
   margin-top: 100px;
 }
-.container img {
+.container .container__img {
   width: 400px;
   height: 350px;
 }
-.container .card {
+.container .container__card {
   float: left;
   margin: 20px;
   width: 30%;
 }
-.container .card p {
+.container .container__card .container__text {
   color: rgb(176, 163, 163);
 }
-.container .card button {
+.container .container__card .container__button {
   padding: 15px 25px;
   border: 1px solid black;
   margin-top: 50px;
 }
-.container .desc {
+.container .container__desc {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.container .desc h1, .container .desc span {
+.container .container__desc .container__desc__title, .container .container__desc .container__desc__price {
   font-size: 1.25em;
   font-weight: bold;
 }
-.container .desc span {
+.container .container__desc .container__desc__price {
   color: red;
 }
 
 @media only screen and (max-width: 1800px) {
+  .header {
+    width: 70%;
+  }
   .container {
     width: 100%;
   }
-  .container img {
+  .container .container__img {
     width: 70%;
     height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
-  .container .card {
+  .container .container__card {
     float: none;
     width: 70%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
   }
-  .container .card button {
+  .container .container__card .container__button {
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
-  .container .card p {
+  .container .container__card .container__text {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
   }
-  .container .desc {
+  .container .container__desc {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -87,45 +90,48 @@
     margin-left: auto;
     margin-right: auto;
   }
-  .container .desc h1, .container .desc span {
+  .container .container__desc .container__desc__title, .container .container__desc .container__desc__price {
     font-size: 1.25em;
     font-weight: bold;
   }
-  .container .desc span {
+  .container .container__desc .container__desc__price {
     font-size: 1.25em;
     font-weight: bold;
     color: red;
   }
 }
 @media only screen and (max-width: 600px) {
+  .header {
+    width: 70%;
+  }
   .container {
     width: 100%;
   }
-  .container img {
+  .container .container__img {
     width: 100%;
     height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
-  .container .card {
+  .container .container__card {
     float: none;
     width: 100%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
   }
-  .container .card button {
+  .container .container__card .container__button {
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
-  .container .card p {
+  .container .container__card .container__text {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
-  .container .desc {
+  .container .container__desc {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -133,11 +139,11 @@
     margin-left: auto;
     margin-right: auto;
   }
-  .container .desc h1, .container .desc span {
+  .container .container__desc .container__desc__title, .container .container__desc .container__desc__price {
     font-size: 1.25em;
     font-weight: bold;
   }
-  .container .desc span {
+  .container .container__desc .container__desc__price {
     font-size: 1.25em;
     font-weight: bold;
     color: red;

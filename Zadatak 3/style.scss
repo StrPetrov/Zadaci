@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.img_container {
+.img__container {
     position: relative;
     background-image: url('img1.jpg');
     height: 700px;
@@ -40,7 +40,7 @@
     z-index: 1;
 }
 
-.form_box {
+.form-box {
     position: absolute;
     top: 63%;
     left: 20%;
@@ -49,20 +49,20 @@
     height: 580px;
     display: flex;
 
-    .fraction {
+    .form-box__fraction {
         flex: 33.33%;
         text-align: center;
     }
     
-    .orange {
+    .form-box__fraction--orange {
         background-color: rgb(243, 162, 11);
     }
 
-    .darkgrey {
+    .form-box__fraction--darkgrey {
         background-color: rgb(67, 65, 65);
     }
 
-    i {
+    .form-box__icon {
         margin-top: 10%;
         font-size: 4em;
         width: 1.6em;
@@ -73,12 +73,12 @@
         border: 2px solid white;
     }
 
-    h2 {
+    .form-box__title {
         margin-top: 10%;
         color: white;
     }
     
-    p {
+    .form-box__text {
         margin-top: 10%;
         width: 70%;
         margin-left: auto;
@@ -92,19 +92,19 @@
         margin-top: 25%;
     }
 
-    form {
+    .form-box__form {
         margin-top: 10%;
         margin-left: auto;
         margin-right: auto;
         width: 75%;
         text-align: left;
 
-        label {
+        .form-box__form__label {
             color: rgb(163, 167, 172);
             font-size: 1.2em;
         }
 
-        input[type="text"], input[type="email"] {
+        .form-box__form__input__text, .form-box__form__input__email {
             margin-top: 5%;
             margin-bottom: 5%;
             padding: 15px;
@@ -113,7 +113,7 @@
             background-color: transparent;
         }
 
-        input[type="submit"] {
+        .form-box__form__input__submit {
             margin-top: 5%;
             margin-bottom: 5%;
             padding: 15px;
@@ -141,11 +141,11 @@
         z-index: 1;
     }
 
-    .form_box {
+    .form-box {
         flex-direction: column;
     }
 
-    .fraction {
+    .form-box__fraction {
         flex: 100%;
     }
 }

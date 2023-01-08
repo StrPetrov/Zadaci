@@ -13,11 +13,11 @@
     width: 35%;
     margin: auto;
     
-    h1 {
+    .header__title {
         font-size: 3.3em;
     }
 
-    p {
+    .header__subtitle {
         color: rgb(176, 163, 163);
     }
 }
@@ -27,44 +27,48 @@
     margin-right: auto;
     margin-top: 100px;
 
-    img {
+    .container__img {
         width: 400px;
         height: 350px;
     }
-    .card {
+    .container__card {
         float: left;
         margin: 20px;
         width: 30%;
 
-        p {
+        .container__text {
             color: rgb(176, 163, 163);
         }
-        button {
+        .container__button {
             padding: 15px 25px;
             border: 1px solid black;
             margin-top: 50px;
         }
     }
-    .desc {
+    .container__desc {
         display: flex;
         align-items: center;
         justify-content: space-between;
         
-        h1 {
+        .container__desc__title {
             @include myFontStyle;
         }
-        span {
-            @extend h1;
+        .container__desc__price {
+            @extend .container__desc__title;
             color: red;
         }
     }
 }
 
 @media only screen and (max-width: 1800px) {
+    .header {
+        width: 70%;
+    }
+
     .container {
         width: 100%;
 
-        img {
+        .container__img {
             width: 70%;
             height: auto;
             display: block;
@@ -72,26 +76,26 @@
             margin-right: auto;
         }
 
-        .card {
+        .container__card {
             float: none;
             width: 70%;
             height: auto;
             margin-left: auto;
             margin-right: auto;
 
-            button {
+            .container__button {
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
             }
 
-            p {
+            .container__text {
                 width: 70%;
                 margin-left: auto;
                 margin-right: auto;
             }
         }
-        .desc {
+        .container__desc {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -99,10 +103,10 @@
             margin-left: auto;
             margin-right: auto;
             
-            h1 {
+            .container__desc__title {
                 @include myFontStyle;
             }
-            span {
+            .container__desc__price{
                 @include myFontStyle;
                 color: red;
             }
@@ -111,10 +115,14 @@
 }
 
 @media only screen and (max-width: 600px) {
+    .header {
+        width: 70%;
+    }
+
     .container {
         width: 100%;
 
-        img {
+        .container__img {
             width: 100%;
             height: auto;
             display: block;
@@ -122,26 +130,26 @@
             margin-right: auto;
         }
 
-        .card {
+        .container__card {
             float: none;
             width: 100%;
             height: auto;
             margin-left: auto;
             margin-right: auto;
 
-            button {
+            .container__button {
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
             }
 
-            p {
+            .container__text {
                 width: 100%;
                 margin-left: auto;
                 margin-right: auto;
             }
         }
-        .desc {
+        .container__desc {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -149,10 +157,10 @@
             margin-left: auto;
             margin-right: auto;
             
-            h1 {
+            .container__desc__title {
                 @include myFontStyle;
             }
-            span {
+            .container__desc__price {
                 @include myFontStyle;
                 color: red;
             }

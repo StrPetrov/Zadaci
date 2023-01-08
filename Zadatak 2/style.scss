@@ -6,16 +6,16 @@ $mySpanColor: rgb(134, 249, 134);
     padding: 0;
     box-sizing: border-box;
 }
-.card {
+.row__card {
     float: left;
     width: 25%;
     position: relative;
 
-    img {
+    .row__img {
         width: 100%;
         height: auto;
     }
-    .subcard {
+    .row__subcard {
         position: absolute;
         background-color: white;
         top: 80%;
@@ -25,16 +25,16 @@ $mySpanColor: rgb(134, 249, 134);
         width: 90%;
         height: 70%;
 
-        h2 {
+        .row__subcard__title {
             margin-bottom: 5%;
         }
-        p {
+        .row__subcard__text {
             margin-top: 3%;
             margin-bottom: 3%;
             font-size: 14px;
             color: $myFontColor;
         }
-        button {
+        .row__subcard__button {
             margin-top: 5%;
             background-color: $mySpanColor;
             color: white;
@@ -43,7 +43,7 @@ $mySpanColor: rgb(134, 249, 134);
             border-radius: 5px;
             border: hidden;
         }
-        span {
+        .row__subcard__text--colored {
             color: $mySpanColor;
         }
     }
@@ -59,18 +59,18 @@ $mySpanColor: rgb(134, 249, 134);
     text-align: center;
     margin-top: 13%;
 
-    span {
+    .footer__word {
         color: $mySpanColor;
         font-size: 20px;
         font-weight: bold;
     }
-    h1 {
+    .footer__title {
         margin-top: 1%;
     }
 }
 
 @media only screen and (max-width: 1600px) {
-    .card {
+    .row__card{
         float: left;
         width: 50%;
         position: relative;
@@ -79,7 +79,7 @@ $mySpanColor: rgb(134, 249, 134);
 }
 
 @media only screen and (max-width: 828px) {
-    .card {
+    .row__card {
         float: none;
         width: 100%;
         position: relative;
@@ -88,7 +88,7 @@ $mySpanColor: rgb(134, 249, 134);
     }
 }
 @media only screen and (max-width: 770px) {
-    .card {
+    .row__card {
         float: none;
         width: 100%;
         position: relative;
@@ -97,7 +97,7 @@ $mySpanColor: rgb(134, 249, 134);
     }
 }
 @media only screen and (max-width: 560px) {
-    .card {
+    .row__card {
         float: none;
         width: 100%;
         position: relative;

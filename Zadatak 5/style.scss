@@ -53,12 +53,12 @@ $myOrange: rgba(249, 154, 30);
     margin-bottom: 3%;
     text-align: center;
 
-    h3 {
+    .header__subtitle {
         color: grey;
         margin-bottom: 10px;
     }
 
-    h1 {
+    .header__title {
         margin-top: 0;
         font-size: 2.3em;
     }
@@ -72,7 +72,7 @@ $myOrange: rgba(249, 154, 30);
     margin-bottom: 5%;
     border-bottom: 4px solid $myOrange;
 
-    .button {
+    .menu__button {
         padding: 15px 20px;
         font-size: 15px;
         color: rgb(70, 68, 68);
@@ -82,7 +82,7 @@ $myOrange: rgba(249, 154, 30);
         }
     }
 
-    .active {
+    .menu__button--active {
         background-color: $myOrange;
     }
 }
@@ -95,20 +95,20 @@ $myOrange: rgba(249, 154, 30);
     flex-direction: column;
     box-sizing: border-box;
 
-    .row {
+    .gallery__row {
         flex: 100%;
         display: flex;
         flex-direction: row;
 
-        .img_container {
+        .gallery__img-container {
             flex: 33.333%;
             height: 17vw;
             position: relative;
-            &:hover .overlay {
+            &:hover .gallery__overlay {
                 opacity: 1;
             }
 
-            .overlay {
+            .gallery__overlay {
                 position: absolute;
                 background-color: rgba(5, 5, 5, 0.7);
                 width: 100%;
@@ -116,7 +116,7 @@ $myOrange: rgba(249, 154, 30);
                 top: 0;
                 opacity: 0;
 
-                h3 {
+                .gallery__overlay__title {
                     position: absolute;
                     top: 35%;
                     left: 10%;
@@ -124,7 +124,7 @@ $myOrange: rgba(249, 154, 30);
                     font-size: bold;
                 }
 
-                .btn {
+                .gallery__overlay__button {
                     position: absolute;
                     top: 65%;
                     left: 10%;
@@ -136,12 +136,12 @@ $myOrange: rgba(249, 154, 30);
                     display: table;
                 }
 
-                .btn span {
+                .gallery__overlay__button--centred {
                     @include table_cell_centered;
                     font-size: 15px;
                 }
 
-                .corner {
+                .gallery__overlay__corner {
                     position: absolute;
                     top: 0;
                     right: 0;
@@ -154,27 +154,27 @@ $myOrange: rgba(249, 154, 30);
                     display: table;
                 }
 
-                .corner i {
+                .gallery__overlay__corner__icon {
                     @include table_cell_centered;
                 }
             }
         }
     }
         
-    img {
+    .gallery__img {
         width: 100%;
         height: 17vw;
     }
 }
 
-.footer_container {
+.footer-container {
     width: 100%;
     height: 800px;
     margin-top: 10%;
     background-color: black;
     position: relative;
 
-    .section {
+    .footer-container__section {
         width: 60%;
         height: 400px;
         display: flex;
@@ -183,13 +183,13 @@ $myOrange: rgba(249, 154, 30);
         left: 50%;
         transform: translate(-50%, -50%);
 
-        .col {
+        .footer-container__col {
             flex: 33.333%;
             height: 100%;
             position: relative;
         }
 
-        .col .vertical_line {
+        .footer-container__col__vertical-line{
             width: 5px;
             height: 30px;
             background-color: $myOrange;
@@ -198,7 +198,7 @@ $myOrange: rgba(249, 154, 30);
             left: 20px;
         }
 
-        .col .head {
+        .footer-container__col__head {
             position: absolute;
             top: 37px;
             left: 50px;
@@ -207,14 +207,14 @@ $myOrange: rgba(249, 154, 30);
             font-weight: bold;
         }
 
-        .col .icon_machine {
+        .footer-container__col__icon-machine {
             position: absolute;
             top: 90px;
             left: 20px;
             color: $myOrange;
             font-size: 30px;
 
-            .constra {
+            .footer-container__col__icon-machine__constra {
                 color: white;
                 font-size: 30px;
                 font-weight: bold;
@@ -222,126 +222,126 @@ $myOrange: rgba(249, 154, 30);
             }
         }
 
-        .col .description {
+        .footer-container__col__description{
             @include description;
             top: 180px;
         }
 
-        .col .icons {
+        .footer-container__col__icons{
             @include working_days;
             top: 280px;
 
-            i {
+            .footer-container__col__icons__logos {
                 padding-right: 9px;
             }
         }
 
-        .col .second_description {
+        .footer-container__col__second-description {
             @include description;
             top: 90px;
         }
 
-        .col .working_hours .days {
+        .footer-container__col__working_hours .days {
             @include working_days;
             top: 230px;
         }
 
-        .col .working_hours .hours {
+        .footer-container__col__working_hours .hours {
             @include working_hours;
             top: 230px;
         }
 
-        .col .working_hours .days2 {
+        .footer-container__col__working_hours .days2 {
             @include working_days;
             top: 255px;
         }
 
-        .col .working_hours .hours2 {
+        .footer-container__col__working_hours .hours2 {
             @include working_hours;
             top: 255px;
         }
 
-        .col .working_hours .days3 {
+        .footer-container__col__working_hours .days3 {
             @include working_days;
             top: 280px;
         }
 
-        .col .working_hours .hours3 {
+        .footer-container__col__working_hours .hours3 {
             @include working_hours;
             top: 280px;
         }
 
-        .col .term {
+        .footer-container__col__term {
             @include term;
             top: 100px;
 
-            i {
+            .footer-container__col__term__icon {
                 padding-right: 10px;
             }
 
-            hr {
+            .footer-container__col__term__hr {
                 @include hr;
             }
         }
-        .col .term2 {
+        .footer-container__col__term2 {
             @include term;
             top: 150px;
 
-            i {
+            .footer-container__col__term__icon {
                 padding-right: 10px;
             }
 
-            hr {
+            .footer-container__col__term__hr {
                 @include hr;
             }
         }
-        .col .term3 {
+        .footer-container__col__term3 {
             @include term;
             top: 200px;
 
-            i {
+            .footer-container__col__term__icon {
                 padding-right: 10px;
             }
 
-            hr {
+            .footer-container__col__term__hr {
                 @include hr;
             }
         }
-        .col .term4 {
+        .footer-container__col__term4 {
             @include term;
             top: 250px;
 
-            i {
+            .footer-container__col__term__icon {
                 padding-right: 10px;
             }
 
-            hr {
+            .footer-container__col__term__hr {
                 @include hr;
             }
         }
 
-        .col .term5 {
+        .footer-container__col__term5 {
             @include term;
             top: 300px;
 
-            i {
+            .footer-container__col__term__icon {
                 padding-right: 10px;
             }
 
-            hr {
+            .footer-container__col__term__hr {
                 @include hr;
             }
         }
     }
 
-    .footer {
+    .footer-container__footer {
         width: 100%;
         height: 100px;
         background-color: $myOrange;
         position: absolute;
         top: 75%;
 
-        .copyright {
+        .footer-container__copyright {
             position: absolute;
             top: 37%;
             left: 20%;
@@ -349,18 +349,18 @@ $myOrange: rgba(249, 154, 30);
             font-size: 13px;
         }
 
-        .footer_menu {
+        .footer-container__footer-menu{
             position: absolute;
             top: 37%;
             left: 65%;
 
-            .footer_button {
+            .footer-container__footer-menu__button {
                 padding: 0 10px;
                 font-size: 13px;
             }
         }
 
-        .arrow_up {
+        .footer-container__footer__arrow-up {
             position: absolute;
             top: 25%;
             right: 60px;
@@ -370,7 +370,7 @@ $myOrange: rgba(249, 154, 30);
             display: table;
             border-radius: 10px;
 
-            i {
+            .footer-container__footer__arrow-up__icon {
                 color: $myOrange;
                 display: table-cell;
                 vertical-align: middle;
@@ -393,46 +393,46 @@ $myOrange: rgba(249, 154, 30);
     .gallery {
         display: block;
 
-        .row {
+        .gallery__row {
             display: block;
 
-            .img_container {
+            .gallery__img-container {
                 height: 300px;
             }
         }
 
-        img {
+        .gallery__img {
             height: 300px;
         }
     }
 
-    .footer_container {
+    .footer-container {
         height: 1300px;
 
-        .section {
+        .footer-container__section {
             display: block;
             top: 20%;
             width: 100%;
 
-            .col {
+            .footer-container__col {
                 display: block;
             }
         }
 
-        .footer {
+        .footer-container__footer {
             top: 100%;
             
-            .copyright {
+            .footer-container__copyright{
                 top: 20%;
                 left: 5%;
             }
 
-            .footer_menu {
+            .footer-container__footer-menu{
                 top: 60%;
                 left: 5%;
             }
 
-            .arrow_up {
+            .footer-container__footer__arrow-up {
                 right: 30px;
             }
         }
@@ -450,46 +450,46 @@ $myOrange: rgba(249, 154, 30);
     .gallery {
         display: block;
 
-        .row {
+        .gallery__row {
             display: block;
 
-            .img_container {
+            .gallery__img-container {
                 height: 500px;
             }
         }
 
-        img {
+        .gallery__img {
             height: 500px;
         }
     }
 
-    .footer_container {
+    .footer-container {
         height: 1300px;
 
-        .section {
+        .footer-container__section {
             display: block;
             top: 20%;
             width: 100%;
 
-            .col {
+            .footer-container__col {
                 display: block;
             }
         }
 
-        .footer {
+        .footer-container__footer {
             top: 100%;
             
-            .copyright {
+            .footer-container__copyright {
                 top: 40%;
                 left: 5%;
             }
 
-            .footer_menu {
+            .footer-container__footer-menu {
                 top: 40%;
                 left: 45%;
             }
 
-            .arrow_up {
+            .footer-container__footer__arrow-up {
                 right: 30px;
             }
         }
