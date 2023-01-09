@@ -57,7 +57,6 @@ body::before {
   top: 40%;
   right: 15%;
   left: 15%;
-  display: flex;
 }
 .container .container__box {
   flex: 50%;
@@ -110,46 +109,58 @@ body::before {
 
 @media only screen and (min-width: 150px) and (max-width: 439px) {
   body {
-    height: 1500px;
+    height: 1700px;
+  }
+  .header {
+    top: 10%;
   }
   .container {
     display: block;
+    top: 25%;
   }
   .container .container__box {
     margin-bottom: 100px;
   }
   .dots {
-    bottom: 50%;
+    top: 90%;
     width: 30%;
   }
 }
 @media only screen and (min-width: 440px) and (max-width: 649px) {
   body {
-    height: 1800px;
+    height: 1300px;
+  }
+  .header {
+    top: 10%;
   }
   .container {
     display: block;
+    top: 25%;
   }
   .container .container__box {
     margin-bottom: 100px;
   }
   .dots {
     width: 30%;
-    top: 95%;
+    top: 90%;
   }
 }
-@media only screen and (min-width: 650px) and (max-width: 900px) {
+@media only screen and (min-width: 650px) and (max-width: 935px) {
   body {
-    height: 1500px;
+    height: 1300px;
+  }
+  .header {
+    top: 10%;
   }
   .container {
     display: block;
+    top: 25%;
   }
   .container .container__box {
     margin-bottom: 100px;
   }
   .dots {
     width: 20%;
-    top: 85%;
+    top: 80%;
   }
 }/*# sourceMappingURL=style.css.map */
